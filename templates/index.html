@@ -1,625 +1,795 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>trovol</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/nice-select.css">
-      <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-      <link rel="stylesheet" href="css/niceCountryInput.css">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-   </head>
-   <!-- body -->
-   <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div>
-      <!-- end loader -->
-      <!-- header -->
-      <div class="header">
-         <div class="top_header">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Venue - Responsive Web Template</title>
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{% static ' css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontAwesome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/hero-slider.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+        <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js ' %}"></script>
+<!--
+	Venue Template
+	http://www.templatemo.com/tm-522-venue
+-->
+    </head>
+
+<body>
+ 
+    <div class="wrap">
+        <header id="header">
             <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="select_main">
-                        <div class="sign">
-                           <div class="niceCountryInputSelector se_flag" style="width: 200px;" data-selectedcountry="US" data-showspecial="false" data-showflags="true" data-i18nall="All selected"
-                              data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback" />
-                           </div>
-                           <span> <a href="javascript:void(0)">Sign Up</a> </span>   
-                        </div>
-                        <ul class="top_infomation">
-                           <li><img src="images/ti_call.png" alt="#"/>Call : +1234567890</li>
-                           <li><img src="images/ti_mail.png" alt="#"/><a href="Javascript:void(0)"> demo@gmail.com</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="primary-nav-button" type="button">Menu</button>
+                        <a href="index.html"><div class="logo">
+                            <img src="{% static 'img/logo.png '%}"  alt="Venue Logo">
+                        </div></a>
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="dropdown menu">
+                                <li class='active'><a href="#">Popular</a></li>
+                                <li><a href="#">Most Visited</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Most Visited 1</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Sub Visited Menu 1</a></li>
+                                                <li><a href="#">Sub Visited Two</a></li>
+                                                <li><a href="#">Sub Visited Menu 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Most Visited 2</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Sub Visited Menu 4</a></li>
+                                                <li><a href="#">Sub Visited Five</a></li>
+                                                <li><a href="#">Sub Visited Menu 6</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Most Visited 3</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Sub Visited Menu 7</a></li>
+                                                <li><a href="#">Sub Visited #8</a></li>
+                                                <li><a href="#">Sub Visited Menu 9</a></li>
+                                                <li><a href="#">Sub Visited #10</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="scrollTo" data-scrollTo="blog" href="#">Blog Entries</a></li>
+                                <li><a class="scrollTo" data-scrollTo="services" href="#">Our Services</a></li>
+                                <li><a class="scrollTo" data-scrollTo="contact" href="#">Contact Us</a></li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="header_midil">
-            <div class="container">
-               <div class="row d_flex">
-                  <div class=" col-md-2 col-sm-3 logo_section">
-                     <div class="full">
-                        <div class="center-desk">
-                           <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-9 col-md-8">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="index.html">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="about.html">About</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="pakages.html">Pakages </a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="client.html">client </a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="blog.html">Blog</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
-                              </li>
-                           </ul>
-                        </div>
-                     </nav>
-                  </div>
-                  <div class="col-md-2  d_none">
-                     <ul class="email text_align_right">
-                        <li><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                        <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i>   </a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end header inner -->
-      <!-- end header -->
-      <!-- top -->
-      <div class="full_bg">
-         <div class="slider_main">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <!-- carousel code -->
-                     <div id="carouselExampleIndicators" class="carousel slide">
-                        <ol class="carousel-indicators">
-                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                           <!-- first slide -->
-                           <div class="carousel-item active">
-                              <div class="carousel-caption relative">
-                                 <div class="row">
-                                    <div  class="col-md-10 offset-md-1">
-                                       <div class="board">
-                                          <h1>Now start <br>Your traveling </h1>
-                                          <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed towhen looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
-                                          <a class="read_more" href="Javascript:void(0)">Read More</a>
-                                          <a class="read_more" href="Javascript:void(0)">Contact us</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <!-- second slide -->
-                           <div class="carousel-item">
-                              <div class="carousel-caption relative">
-                                 <div class="row">
-                                    <div  class="col-md-10 offset-md-1">
-                                       <div class="board">
-                                          <h1>Now start <br>Your traveling </h1>
-                                          <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed towhen looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
-                                          <a class="read_more" href="Javascript:void(0)">Read More</a>
-                                          <a class="read_more" href="Javascript:void(0)">Contact us</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <!-- third slide-->
-                           <div class="carousel-item">
-                              <div class="carousel-caption relative">
-                                 <div class="row">
-                                    <div  class="col-md-10 offset-md-1">
-                                       <div class="board">
-                                          <h1>Now start <br>Your traveling </h1>
-                                          <p>when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed towhen looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to</p>
-                                          <a class="read_more" href="Javascript:void(0)">Read More</a>
-                                          <a class="read_more" href="Javascript:void(0)">Contact us</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- controls -->
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <span class="sr-only">Next</span>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end banner -->
-      <!-- our_packages -->
-      <div class="our_packages">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-12">
-                  <form id="table" class="table_form">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <div class="titlepage text_align_left ">
-                              <h3>Our Packages</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <label>Select Your Destination :</label>
-                           <input class="contactus" placeholder="All Destinations" type="text" name="destinations"> 
-                        </div>
-                        <div class="col-md-4">
-                           <label>Select Your Destination :</label>
-                           <input type="text" class="contactus" id="my_date_picker" placeholder="mm-dd-yy" > 
-                        </div>
-                        <div class="col-md-4">
-                           <label>Select Your Destination :</label>
-                           <select id='seluser' class="contactus" >
-                              <option value='0'>$1090</option>
-                              <option value='1'>$1100</option>
-                              <option value='2'>$1160</option>
-                              <option value='3'>$1190</option>
-                           </select>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Search</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="col-md-12">
-                  <div class="filter_main">
-                     <a class="read_more" href="javascript:void(0)"> <img src="images/filter.png" alt="#"/> More Filters </a>
-                  </div>
-               </div>
-               <div class="col-md-8 offset-md-2">
-                  <div class="typologies">
-                     <div class="row">
-                        <div class="col-md-3">
-                           <div class="typolo">
-                              <span>typologies :</span>
-                              <form>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio" checked> <span class="label-text">Relax </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text">Cultural </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text">Sport </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text">History </span>
-                                    </label>
-                                 </div>
-                              </form>
-                           </div>
-                        </div>
-                        <div class="col-md-3">
-                           <div class="typolo">
-                              <span>Durations :
-                              </span>
-                              <form>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio" checked> <span class="label-text"> 2 - 4 Days </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text"> 2 - 3 Days </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                       <input type="radio" name="radio"> <span class="label-text"> 2 - 5 Days </span>
-                                       </label> 
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                       <input type="radio" name="radio"> <span class="label-text"> 2 - 6 Days </span>
-                                       </label>
-                                 </div>
-                              </form>
-                           </div>
-                        </div>
-                        <div class="col-md-3">
-                           <div class="typolo">
-                              <span>Difficulty :
-                              </span>
-                              <form>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio" checked> <span class="label-text">High  </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text">Low  </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text">Medium </span>
-                                    </label>
-                                 </div>
-                              </form>
-                           </div>
-                        </div>
-                        <div class="col-md-3">
-                           <div class="typolo">
-                              <span>Min Age :
-                              </span>
-                              <form>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio" checked> <span class="label-text"> 10 Years  </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text"> 25 Years  </span>
-                                    </label>
-                                 </div>
-                                 <div class="form-check">
-                                    <label class="marg_bottom0">
-                                    <input type="radio" name="radio"> <span class="label-text"> 40 Years </span>
-                                    </label>
-                                 </div>
-                              </form>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end our_packages -->
-      <!-- packages -->
-      <div class="packages">
-         <div class="container">
+        </header>
+    </div>
+      
+
+    
+    <section class="banner" id="top">
+        <div class="container">
             <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage text_align_center ">
-                     <h2>World Place Packages</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class=" col-md-6">
-                  <div id="ho_img" class="packages_box" data-aos="fade-right" >
-                     <figure><img src="images/packag1.jpg" alt="#"/></figure>
-                     <div class="tuscany">
-                        <div class="tusc text_align_left">
-                           <div class="italy">
-                              <h3>Tuscany</h3>
-                              <span><img src="images/loca.png" alt="#"/> Italy</span>
-                           </div>
-                           <div class="italy_right">
-                              <h3>Price</h3>
-                              <span>$1000.0</span>
-                           </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="banner-caption">
+                        <div class="line-dec"></div>
+                        <h2>Best Finder For You</h2>
+                        <span>Suspendisse eu lorem massa. Integer sit amet posuere tellus.</span>
+                        <div class="blue-button">
+                            <a class="scrollTo" data-scrollTo="popular" href="#">Discover More</a>
                         </div>
-                        <p>Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us</p>
-                        <div class="tusc">
-                           <a class="read_more" href="Javascript:void(0)">Read More</a>
-                           <a class="read_more" href="Javascript:void(0)">Book Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class=" col-md-6">
-                  <div id="ho_img" class="packages_box" data-aos="fade-left">
-                     <figure><img src="images/packag2.jpg" alt="#"/></figure>
-                     <div class="tuscany">
-                        <div class="tusc text_align_left">
-                           <div class="italy">
-                              <h3>Pais</h3>
-                              <span><img src="images/loca.png" alt="#"/> Italy</span>
-                           </div>
-                           <div class="italy_right">
-                              <h3>Price</h3>
-                              <span>$1000.0</span>
-                           </div>
-                        </div>
-                        <p>Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us</p>
-                        <div class="tusc">
-                           <a class="read_more" href="Javascript:void(0)">Read More</a>
-                           <a class="read_more" href="Javascript:void(0)">Book Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class=" col-md-6">
-                  <div id="ho_img" class="packages_box" data-aos="fade-right" >
-                     <figure><img src="images/packag3.jpg" alt="#"/></figure>
-                     <div class="tuscany">
-                        <div class="tusc text_align_left">
-                           <div class="italy">
-                              <h3>San Francisco</h3>
-                              <span><img src="images/loca.png" alt="#"/> United States
-                              </span>
-                           </div>
-                           <div class="italy_right">
-                              <h3>Price</h3>
-                              <span>$1000.0</span>
-                           </div>
-                        </div>
-                        <p>Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us</p>
-                        <div class="tusc">
-                           <a class="read_more" href="Javascript:void(0)">Read More</a>
-                           <a class="read_more" href="Javascript:void(0)">Book Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class=" col-md-6">
-                  <div id="ho_img" class="packages_box" data-aos="fade-left">
-                     <figure><img src="images/packag4.jpg" alt="#"/></figure>
-                     <div class="tuscany">
-                        <div class="tusc text_align_left">
-                           <div class="italy">
-                              <h3>Phuket</h3>
-                              <span><img src="images/loca.png" alt="#"/> Thailandia</span>
-                           </div>
-                           <div class="italy_right">
-                              <h3>Price</h3>
-                              <span>$1000.0</span>
-                           </div>
-                        </div>
-                        <p>Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us</p>
-                        <div class="tusc">
-                           <a class="read_more" href="Javascript:void(0)">Read More</a>
-                           <a class="read_more" href="Javascript:void(0)">Book Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-12">
-                  <a class="read_more" href="Javascript:void(0)">See More</a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end packages -->
-      <!-- about -->
-      <div class="about">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage text_align_center">
-                     <h2>About Our Company</h2>
-                  </div>
-               </div>
-               <div class="col-md-10 offset-md-1">
-                  <div class="about_text text_align_center">
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentiallyLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                     </p>
-                     <a class="read_more" href="about.html">Read More</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end about -->
-      <!-- customers -->
-      <div class="customers">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="titlepage text_align_center">
-                     <h2>Customers Says </h2>
-                  </div>
-               </div>
-            </div>
-            <!-- start slider section -->
-            <div class="row">
-               <div class="col-md-12">
-                  <div id="myCarousel" class="carousel slide customers_banne" data-ride="carousel">
-                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                     </ol>
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <div class="container-fluid">
-                              <div class="carousel-caption relative">
-                                 <div class="test_box text_align_center">
-                                    <p>text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typetext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
-                                    <i><img src="images/test2.png" alt="#"/></i>
-                                    <h4>Fitter Found</h4>
-                                    <span>Industry's standard </span>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container-fluid">
-                              <div class="carousel-caption relative">
-                                 <div class="test_box text_align_center">
-                                    <p>text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typetext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
-                                    <i><img src="images/test2.png" alt="#"/></i>
-                                    <h4>Fitter Found</h4>
-                                    <span>Industry's standard </span>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container-fluid">
-                              <div class="carousel-caption relative">
-                                 <div class="test_box text_align_center">
-                                    <p>text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typetext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
-                                    <i><img src="images/test2.png" alt="#"/></i>
-                                    <h4>Fitter Found</h4>
-                                    <span>Industry's standard </span>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                     <i class="fa fa-angle-left" aria-hidden="true"></i>
-                     <span class="sr-only">Previous</span>
-                     </a>
-                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                     <i class="fa fa-angle-right" aria-hidden="true"></i>
-                     <span class="sr-only">Next</span>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end customers -->
-      <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12 ">
-                     <div class="letter text_align_left">
-                        <h2>Contact Us</h2>
-                     </div>
-                  </div>
-                  <div class="col-md-5">
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="cont_in" placeholder="Full Name" type="type" name=" Name"> 
-                           </div>
-                           <div class="col-md-12">
-                              <input class="cont_in" placeholder="Your Email" type="type" name="Email"> 
-                           </div>
-                           <div class="col-md-12">
-                              <input class="cont_in" placeholder="Phone Number" type="type" name="Phone Number">                          
-                           </div>
-                           <div class="col-md-12">
-                              <input class="cont_in" placeholder="Your Words" type="type" name="Words"> 
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btnt">Send</button>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-                  <div class="col-md-4 ">
-                     <ul class="conta">
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Locations 
-                        </li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i>+01 1234567890</li>
-                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="Javascript:void(0)"> demo@gmail.com</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-md-3">
-                     <div class="follow text_align_left">
-                        <h3>Follow Us</h3>
-                        <ul class="social_icon ">
-                           <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                           <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                           <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                           <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-md-12">
-                     <div class="follow letter text_align_left">
-                        <h3>Newsletter</h3>
-                        <form class="form_subscri">
-                           <input class="newsl" placeholder="Email" type="text" name="Email">
-                           <button class="subsci_btn">subscribe</button>
+                    </div>
+                    <div class="submit-form">
+                        <form id="form-submit" action="" method="get">
+                            <div class="row">
+                                <div class="col-md-3 first-item">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-3 second-item">
+                                    <fieldset>
+                                        <input name="location" type="text" class="form-control" id="location" placeholder="Type location..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-3 third-item">
+                                    <fieldset>
+                                        <select required name='category' onchange='this.form.()'>
+                                            <option value="">Select category...</option>
+                                            <option value="Shops">Shops</option>
+                                            <option value="Hotels">Hotels</option>
+                                            <option value="Restaurants">Restaurants</option>
+                                            <option value="Events">Events</option>
+                                            <option value="Meetings">Meetings</option>
+                                            <option value="Fitness">Fitness</option>
+                                            <option value="Cafes">Cafes</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-3">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="btn">Search Now</button>
+                                    </fieldset>
+                                </div>
+                            </div>
                         </form>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
+        </div>
+    </section>
+
+    <section class="popular-places" id="popular">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <span>Popular Places</span>
+                        <h2>Integer sapien odio</h2>
+                    </div>
+                </div> 
+            </div> 
+            <div class="owl-carousel owl-theme">
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_1.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Mauris tempus</h4>
+                            <span>76 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_2.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Aenean dolor</h4>
+                            <span>18 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_3.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Nunc at quam</h4>
+                            <span>55 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_4.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Fusce ac turpis</h4>
+                            <span>66 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_5.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Lorem ipsum</h4>
+                            <span>82 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_1.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Praesent nec</h4>
+                            <span>76 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_2.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Suspendisse</h4>
+                            <span>36 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_3.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Bibendum</h4>
+                            <span>48 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_4.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Quisque sodales</h4>
+                            <span>66 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_5.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Pellentesque</h4>
+                            <span>85 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_1.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Commodo</h4>
+                            <span>76 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_2.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Adipiscing</h4>
+                            <span>32 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_3.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Etiam hendrerit</h4>
+                            <span>49 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_4.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Suspendisse</h4>
+                            <span>63 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/popular_item_5.jpg" alt="">
+                        <div class="text-content">
+                            <h4>Sit amet dictum</h4>
+                            <span>86 listings</span>
+                        </div>
+                        <div class="plus-button">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/jquery.nice-select.min.js"></script>
-      <!-- sidebar -->
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script src="js/bootstrap-datepicker.min.js"></script>
-      <script src="js/niceCountryInput.js"></script>
-      <script src="js/custom.js"></script>
-      <script>  AOS.init();</script>
-   </body>
+        </div>
+    </section>
+
+
+
+    <section class="featured-places" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <span>Featured Places</span>
+                        <h2>Praesent nec dui sed urna</h2>
+                    </div>
+                </div> 
+            </div> 
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="featured-item">
+                        <div class="thumb">
+                            <img src="img/featured_item_1.jpg" alt="">
+                            <div class="overlay-content">
+                                <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="date-content">
+                                <h6>28</h6>
+                                <span>August</span>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>Lorem ipsum dolor</h4>
+                            <span>Category One</span>
+                            <p>Vestibulum id est eu felis vulputate hendrerit. Suspendisse dapibus turpis in dui pulvinar imperdiet. Nunc consectetur.</p>
+                            <div class="row">
+                                <div class="col-md-6 first-button">
+                                    <div class="text-button">
+                                        <a href="#">Add to favorites</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-button">
+                                        <a href="#">Continue Reading</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="featured-item">
+                        <div class="thumb">
+                            <img src="img/featured_item_2.jpg" alt="">
+                            <div class="overlay-content">
+                                <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="date-content">
+                                <h6>20</h6>
+                                <span>September</span>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>Nullam nibh lacus</h4>
+                            <span>Category Two</span>
+                            <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere.</p>
+                            <div class="row">
+                                <div class="col-md-6 first-button">
+                                    <div class="text-button">
+                                        <a href="#">Add to favorites</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-button">
+                                        <a href="#">Continue Reading</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="featured-item">
+                        <div class="thumb">
+                            <img src="img/featured_item_3.jpg" alt="">
+                            <div class="overlay-content">
+                                <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="date-content">
+                                <h6>12</h6>
+                                <span>October</span>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>Suspendisse semper non</h4>
+                            <span>Category Three</span>
+                            <p>Praesent iaculis gravida elementum. Proin fermentum neque facilisis semper pharetra. Sed vestibulum vehicula tincidunt.</p>
+                            <div class="row">
+                                <div class="col-md-6 first-button">
+                                    <div class="text-button">
+                                        <a href="#">Add to favorites</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-button">
+                                        <a href="#">Continue Reading</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="our-services" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <span>Our Services</span>
+                        <h2>Best Template Site</h2>
+                    </div>
+                </div> 
+            </div> 
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src="img/service_icon_1.png" alt="">
+                        </div>
+                        <h4>High Quality Design</h4>
+                        <p>Etiam viverra nibh at lorem hendrerit porta non nec ligula. Donec hendrerit porttitor pretium. Suspendisse fermentum nec risus.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src="img/service_icon_2.png" alt="">
+                        </div>
+                        <h4>Fully Customizable</h4>
+                        <p>Vivamus nec vehicula felis, sit amet convallis ex. Aenean dolor risus, rutrum at tincidunt eget, placerat ac mauris.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src="img/service_icon_3.png" alt="">
+                        </div>
+                        <h4>Best HTML CSS Layout</h4>
+                        <p>Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus leo, quis viverra purus condimentum nec.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="down-services">
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="left-content">
+                                    <h4>In hac habitasse platea dictumst</h4>
+                                    <p>Aenean hendrerit metus leo, quis viverra purus condimentum nec. Pellentesque a sem semper, lobortis mauris non, varius urna. Quisque sodales purus eu tellus fringilla.<br><br>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst.</p>
+                                    <div class="blue-button">
+                                        <a href="#">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="accordions">
+                                    <ul class="accordion">
+                                        <li>
+                                            <a>Ut in dapibus ipsum</a>
+                                            <p>Nulla eget aliquet dui, vitae tincidunt nulla. Sed sagittis odio vitae auctor volutpat. In semper ex neque, ut hendrerit mauris rutrum eget. Integer consectetur neque eu enim dictum porta. Sed et risus ac sapien congue mattis.</p>
+                                        </li>
+                                        <li>
+                                            <a>Vivamus ligula metus</a>
+                                            <p>Integer vel augue arcu. Fusce ac turpis cursus, malesuada nulla quis, lobortis dui. Etiam blandit, erat efficitur rhoncus pellentesque, ligula turpis tempor dolor.</p>
+                                        </li>
+                                        <li>
+                                            <a>Suspendisse dapibus</a>
+                                            <p>Nullam nibh lacus, rhoncus sit amet feugiat vel, porttitor sit amet nibh. Pellentesque feugiat justo nec enim pretium, sed faucibus lacus aliquam. Sed ac interdum mauris.</p>
+                                        </li>
+                                    </ul> <!-- / accordion -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="video-container">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            <div class="inner">
+                <span>Video Presentation</span>
+                <h2>Sed et risus ac sapien congue mattis.</h2>
+                <a href="http://youtube.com" target="_blank"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+        <video autoplay="" loop="" muted>
+        	<source src="highway-loop.mp4" type="video/mp4" />
+        </video>
+    </section>
+
+
+
+    <section class="pricing-tables">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <span>Pricing Tables</span>
+                        <h2>Duis molestie ipsum id faucibus fermentum</h2>
+                    </div>
+                </div> 
+            </div> 
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="table-item">
+                        <div class="top-content">
+                            <h4>Starter Plan</h4>
+                            <h1>$25</h1>
+                            <span>/monthly</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">100 Suspendisse dapibus</a></li>
+                            <li><a href="#">10x Paleo celiac enamel</a></li>
+                            <li><a href="#">Williamsburg organic post ironic</a></li>
+                            <li><a href="#">Helvetica pinterest yuccie</a></li>
+                            <li><a href="#">Plaid shabby chic godard</a></li>
+                        </ul>
+                        <div class="blue-button">
+                            <a href="#">Buy It Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="table-item">
+                        <div class="top-content">
+                            <h4>Premium Plan</h4>
+                            <h1>$45</h1>
+                            <span>/monthly</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">200 Suspendisse dapibus</a></li>
+                            <li><a href="#">20x Paleo celiac enamel</a></li>
+                            <li><a href="#">Williamsburg organic post ironic</a></li>
+                            <li><a href="#">Helvetica pinterest yuccie</a></li>
+                            <li><a href="#">Plaid shabby chic godard</a></li>
+                        </ul>
+                        <div class="blue-button">
+                            <a href="#">Buy It Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="table-item">
+                        <div class="top-content">
+                            <h4>Advanced Plan</h4>
+                            <h1>$85</h1>
+                            <span>/monthly</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">400 Suspendisse dapibus</a></li>
+                            <li><a href="#">40x Paleo celiac enamel</a></li>
+                            <li><a href="#">Williamsburg organic post ironic</a></li>
+                            <li><a href="#">Helvetica pinterest yuccie</a></li>
+                            <li><a href="#">Plaid shabby chic godard</a></li>
+                        </ul>
+                        <div class="blue-button">
+                            <a href="#">Buy It Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact" id="contact">
+        <div id="map">
+        			<!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                    -->
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="wrapper">
+                  <div class="section-heading">
+                      <span>Contact Us</span>
+                      <h2>Vivamus nec vehicula felis</h2>
+                  </div>
+                  <!-- Modal button -->
+                  <button id="modBtn" class="modal-btn">Talk to us</button>
+                </div>  
+                <div id="modal" class="modal">
+                  <!-- Modal Content -->
+                  <div class="modal-content">
+                    <div class="close fa fa-close"></div>
+                    <div class="row">
+                        <div class="col-md-8"> 
+                            <div class="left-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="section-heading">
+                                            <span>Talk To Us</span>
+                                            <h2>Let's have a discussion</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                      </fieldset>
+                                    </div>
+                                     <div class="col-md-6">
+                                      <fieldset>
+                                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                      </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="right-content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="content">                                          
+                                            <div class="section-heading">
+                                                <span>More About Us</span>
+                                                <h2>Venue Company</h2>
+                                            </div>
+                                            <p>Etiam viverra nibh at lorem hendrerit porta non nec ligula. Donec hendrerit porttitor pretium. Suspendisse fermentum nec risus eu bibendum.</p>
+                                            <ul>
+                                                <li><span>Phone:</span><a href="#">010-050-0550</a></li>
+                                                <li><span>Email:</span><a href="#">hi@company.co</a></li>
+                                                <li><span>Address:</span><a href="#">company.co</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-veno">
+                        <div class="logo">
+                            <img src="img/footer_logo.png" alt="Venue Logo">
+                        </div>
+                        <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst.</p>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-rss"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="useful-links">
+                        <div class="footer-heading">
+                            <h4>Useful Links</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Help FAQs</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Register</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Login</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>My Profile</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>How It Works?</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>More About Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Our Clients</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Partnerships</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Blog Entries</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="footer-heading">
+                            <h4>Contact Information</h4>
+                        </div>
+                        <p>Praesent iaculis gravida elementum. Proin fermentum neque facilisis semper pharetra. Sed vestibulum vehicula tincidunt.</p>
+                        <ul>
+                            <li><span>Phone:</span><a href="#">010-050-0550</a></li>
+                            <li><span>Email:</span><a href="#">hi@company.co</a></li>
+                            <li><span>Address:</span><a href="#">company.co</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <p>Copyright &copy; 2018 Company Name 
+    
+    	- Design: <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/datepicker.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

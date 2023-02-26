@@ -5,8 +5,8 @@ from django.shortcuts import render
 def demo(request) :
     return render(request, "index.html")
 
-def result(request):
-    return render(request, "result.html")
-def blah(request):
-    return render(request, "blah.html")
+# def result(request):
+#     return render(request, "result.html")
+# def blah(request):
+#     return render(request, "blah.html")
     
