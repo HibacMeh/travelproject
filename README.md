@@ -1,2 +1,3 @@
-Learning python django
+Building a travelapp using Django framework 
+
 
