@@ -31,3 +31,26 @@ if settings.DEBUG:
 4)create fields based on your table 
 add def __str__if to rename on models 
 
+5) HTML Parsing using ORM -- go to views and add obj
+ obj = Places.objects.all
+    return render(request, "index.html", {'result': obj})
+
+6) call the obj on required places 
+
+
+#django rgistaertion part1
+1)make anew app for credentials and add in the settings 
+2) add it in the projects  and reidrect to add url
+3)app url -specify the view 
+4)add fuction in the view and redirect it to templates
+5) build a registration form with method post in the credetnials html also add csrf token
+
+6) go to the views page of the app and add the if conditionals for post aand add user.save()
+7)log in and it will appaear on postresql 
+
+#check if password are euqal 
+8) add an if conditional for password and c passowrd and add else tag on viewpage
+
+
+
+
