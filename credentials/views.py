@@ -1,5 +1,4 @@
-from collections import UserList, UserString
-from site import USER_BASE
+from django.contrib.auth.models import User
 from django.shortcuts import render
 
 # Create your views here.
@@ -14,7 +13,7 @@ def cred (request):
       cpassword= request.POST['confirm_password']
       
       if password==cpassword:
-         user = UserString.objects.create_user(firstname= firstname, lastname=lastname,email=email,password=password)
+         user = User.objects.create_user(firstname= firstname, lastname=lastname,email=email,password=password)
          user.save();
          print("user has been saved")
 
@@ -24,6 +23,5 @@ def cred (request):
       
 
     return render(request, "cred.html")
-
 
 
