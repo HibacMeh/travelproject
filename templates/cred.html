@@ -9,7 +9,8 @@
 <body>
    <div>
     
-    <form action="#" method="post">
+    <form action="cred" method="post">
+       {% csrf_token %}
         <input type="hidden" name="_csrf" value="{{ csrf_token() }}">
       
         <label for="firstname">First Name:</label>
