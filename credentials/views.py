@@ -6,6 +6,7 @@ def cred (request):
     #the auth table has been already craeted by django 
     
     if request.method == 'POST':
+      username = request.POST['username']
       firstname = request.POST['firstname']
       lastname= request.POST['lastname']
       email = request.POST['email']
@@ -13,7 +14,8 @@ def cred (request):
       cpassword= request.POST['confirm_password']
       
       if password==cpassword:
-         user = User.objects.create_user(firstname= firstname, lastname=lastname,email=email,password=password)
+         # left side table name, right side variable we assigned 
+         user = User.objects.create_user(username= username, first_name= firstname, last_name=lastname,email=email,password=password)
          user.save();
          print("user has been saved")
 
