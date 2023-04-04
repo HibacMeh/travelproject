@@ -51,6 +51,3 @@ add def __str__if to rename on models
 #check if password are euqal 
 8) add an if conditional for password and c passowrd and add else tag on viewpage
 
-
-
-
