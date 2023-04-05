@@ -53,4 +53,30 @@ add def __str__if to rename on models
 
 $sanitization messaging 
 9) views.py credentails - add messages if things dont work check all the if -else cases
-10) part two messaging
+
+if password==cpassword:
+    %      #all of these if else cases only happen if the password is correct
+    %      if User.objects.filter(username=username).exists():
+    %         messages.info(request, "username taken")
+    %         return redirect('cred')
+    %      elif User.objects.filter(email=email).exists():
+    %         messages.info(request, "email is taken")
+    %         return redirect('cred')
+    %      else:
+    %         user = User.objects.create_user(username= username, first_name= firstname, last_name=lastname,email=email,password=password)
+    %         user.save();
+    %      print("user has been saved")
+
+    %   else:
+    %      messages.info(request, "password not matching")
+    %      return redirect(request, "cred")
+    %   return redirect('/')
+
+10) part two messaging- show the "taken messages " on viewpage 
+go to cred.html and add at the end the jinja
+ {% for msg in messages %}
+    % {{msg}}
+    {% endfor %}
+
+#Login 
+1)
