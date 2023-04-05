@@ -53,3 +53,4 @@ add def __str__if to rename on models
 
 $sanitization messaging 
 9) views.py credentails - add messages if things dont work check all the if -else cases
+10) part two messaging
