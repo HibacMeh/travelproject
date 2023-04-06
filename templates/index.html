@@ -39,7 +39,10 @@
                         </div></a>
                         <nav id="primary-nav" class="dropdown cf">
                             <ul class="dropdown menu">
-                                <li class='active'><a href="#">Popular</a></li>
+                                {% if user.is_authenticated %}
+                                <li class='active'><a href="credentials/Logout">Logout</a></li>
+                                {%endif%}
+
                                 <li><a href="#">Most Visited</a>
                                     <ul class="sub-menu">
                                         <li><a href="#">Most Visited 1</a>
@@ -66,9 +69,13 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a class="scrollTo" data-scrollTo="blog" href="#">Blog Entries</a></li>
-                                <li><a class="scrollTo" data-scrollTo="services" href="#">Our Services</a></li>
-                                <li><a class="scrollTo" data-scrollTo="contact" href="#">Contact Us</a></li>
+                                
+                                {% if user.is_authenticated%}
+                                <li><a href="#">Hi {{user.username}}</a></li>
+                                {%else%}
+                                <li><a href="credentials/cred">Registration</a></li>
+                                <li><a href="credentials/login"></a>Login</li>
+                                {%endif%}
                             </ul>
                         </nav><!-- / #primary-nav -->
                     </div>
@@ -644,7 +651,8 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="wrapper">
                   <div class="section-heading">
-                      <span>Contact Us</span>
+                      <span>conatct us</span>
+
                       <h2>Vivamus nec vehicula felis</h2>
                   </div>
                   <!-- Modal button -->

@@ -79,4 +79,19 @@ go to cred.html and add at the end the jinja
     {% endfor %}
 
 #Login 
-1)
+1) do a login page with this 
+% def login(request):
+%    if request.method == 'POST' :
+%       username = request.POST["username"]
+%       password= request.POST["password"]
+%       user = auth.authenticate(username=username, password=password)
+      
+%       if user is not None:
+%        auth.login(request, user)
+%        return redirect('/' )
+        % else:
+        %  messages.info(request, "invalid credentials")
+        %  return redirect("login")
+   
+   
+%    return render(request, "login.html")
